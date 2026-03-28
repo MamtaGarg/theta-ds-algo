@@ -1,5 +1,5 @@
-| Algorithm Name | Pattern        | Description                                    | Time Complexity | Space Complexity | Special Cases  |
-|----------------|----------------|------------------------------------------------|-----------------|------------------|----------------|
-| Bubble Sort    | Sorting        | A simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. | O(n^2)          | O(1)             | Best case: O(n) (when the array is already sorted) |
-| Quick Sort     | Divide and Conquer | An efficient sorting algorithm that uses a divide-and-conquer approach to divide the array into smaller sub-arrays. | O(n log n)      | O(log n)         | Worst case: O(n^2) (when the pivot is the smallest or largest element) |
-| Merge Sort     | Divide and Conquer | A sorting algorithm that follows the divide-and-conquer principle by recursively dividing the array into two halves, sorting them, and then merging them back together. | O(n log n)      | O(n)             | None           |
+| Algorithm Name | Pattern | Sub-pattern | Description | Time Complexity | Space Complexity | Special Cases |
+|----------------|---------|-------------|-------------|------------------|------------------|----------------|
+| Bubble Sort    | Comparison |             | A simple algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. | O(n^2)  | O(1)  | None |
+| Quick Sort     | Divide and Conquer |             | An efficient sorting algorithm that divides the input array into two smaller sub-arrays, sorts them, and then combines the sorted sub-arrays. | O(n log n)  | O(log n)  | None |
+| Merge Sort     | Divide and Conquer |             | An efficient, stable, comparison-based sorting algorithm that splits the array into halves, sorts them, and merges them back together. | O(n log n)  | O(n)  | None |
