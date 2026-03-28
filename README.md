@@ -1,5 +1,3 @@
-| Algorithm Name | Pattern | Sub-pattern | Description | Time Complexity | Space Complexity | Special Cases |
-|----------------|---------|-------------|-------------|------------------|------------------|----------------|
-| Bubble Sort    | Comparison |             | A simple algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. | O(n^2)  | O(1)  | None |
-| Quick Sort     | Divide and Conquer |             | An efficient sorting algorithm that divides the input array into two smaller sub-arrays, sorts them, and then combines the sorted sub-arrays. | O(n log n)  | O(log n)  | None |
-| Merge Sort     | Divide and Conquer |             | An efficient, stable, comparison-based sorting algorithm that splits the array into halves, sorts them, and merges them back together. | O(n log n)  | O(n)  | None |
+| Algorithm Name                                                                                                             | Pattern            | Sub-pattern | Description       | Time Complexity | Space Complexity | Special Cases |
+|----------------------------------------------------------------------------------------------------------------------------|--------------------|-------------|-------------------|----------------|------------------|----------------|
+| [SortedArraySquares](https://github.com/MamtaGarg/theta-ds-algo/blob/main/src/main/java/com.theta/SortedArraySquares.java) | Two Pointer        | Converging  | [Leetocde link][https://leetcode.com/problems/squares-of-a-sorted-array/description/] | O(n)  | O(n)             |  |
