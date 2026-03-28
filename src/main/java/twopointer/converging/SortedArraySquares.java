@@ -1,4 +1,4 @@
-package com.theta;
+package twopointer.converging;
 
 import java.util.Arrays;
 
