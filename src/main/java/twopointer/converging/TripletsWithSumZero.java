@@ -6,28 +6,24 @@ import java.util.List;
 
 
 /**
- * <b>Problem:</b> Given an integer array nums, return all unique triplets [nums[i], nums[j], nums[k]]
- * such that i != j != k and nums[i] + nums[j] + nums[k] == 0.
- * The solution set must not contain duplicate triplets.
- *
- * <b>Example:</b>
- * <pre>
- *   Input:  [-1, 0, 1, 2, -1, -4]
- *   Output: [[-1, -1, 2], [-1, 0, 1]]
- * </pre>
- *
- * <b>Logic:</b>
- * <ol>
- *   <li>Sort the array so we can use the two-pointer converging technique and easily skip duplicates.</li>
- *   <li>Fix one element (nums[i]) and use two pointers (left, right) on the remaining sub-array to find
- *       pairs that sum to -nums[i].</li>
- *   <li>If the current sum == 0, record the triplet and advance both pointers while skipping duplicates.</li>
- *   <li>If the sum &gt; 0, move the right pointer left to decrease the sum.</li>
- *   <li>If the sum &lt; 0, move the left pointer right to increase the sum.</li>
- * </ol>
- *
- * <b>Time Complexity:</b>  O(n²) — sorting is O(n log n) and the nested loop with two pointers is O(n²).
- * <b>Space Complexity:</b> O(n) — for the sorting overhead (depends on implementation), excluding the output list.
+ * Problem: Given an integer array nums, return all unique triplets [nums[i], nums[j], nums[k]]
+  such that i != j != k and nums[i] + nums[j] + nums[k] == 0.
+  The solution set must not contain duplicate triplets.
+
+ * Example:
+    Input:  [-1, 0, 1, 2, -1, -4]
+    Output: [[-1, -1, 2], [-1, 0, 1]]
+
+ * Logic:
+    1. Sort the array so we can use the two-pointer converging technique and easily skip duplicates.
+    2. Fix one element (nums[i]) and use two pointers (left, right) on the remaining sub-array
+       to find pairs that sum to -nums[i].
+    3. If the current sum == 0, record the triplet and advance both pointers while skipping duplicates.
+    4. If the sum > 0, move the right pointer left to decrease the sum.
+    5. If the sum < 0, move the left pointer right to increase the sum.
+
+ * Time Complexity:  O(n²) — sorting is O(n log n) and the nested loop with two pointers is O(n²).
+ * Space Complexity: O(n) — for the sorting overhead (depends on implementation), excluding the output list.
  */
 public class TripletsWithSumZero {
 
@@ -68,6 +64,33 @@ public class TripletsWithSumZero {
             right--;
           } else {
             // Sum too small — move left pointer right to increase it
+            left++;
+          }
+        }
+      }
+      return results;
+    }
+
+    public static List<List<Integer>> threeSumClean(int[] nums) {
+      Arrays.sort(nums);
+      List<List<Integer>> results = new ArrayList<>();
+
+      for (int i = 0; i < nums.length - 2; i++) {
+        int left = i + 1, right = nums.length - 1;
+        if (i > 0 && nums[i] == nums[i - 1]) continue;
+
+        while (left < right) {
+          int sum = nums[left] + nums[right] + nums[i];
+
+          if (sum == 0) {
+            results.add(Arrays.asList(nums[i], nums[left], nums[right]));
+            while (left < right && nums[left] == nums[left + 1]) left++;
+            while (left < right && nums[right] == nums[right - 1]) right--;
+            left++;
+            right--;
+          } else if (sum > 0) {
+            right--;
+          } else {
             left++;
           }
         }
