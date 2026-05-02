@@ -1,6 +1,6 @@
 package mergeIntervals;
 
-/*
+/* Tesco Interview
 * Tesco has around 3200 stores and more than 10% of the stores have around 800 colleagues each.
 
 In a store, a colleague can work for multiple departments. Here are shifts of a colleague in various departments:
