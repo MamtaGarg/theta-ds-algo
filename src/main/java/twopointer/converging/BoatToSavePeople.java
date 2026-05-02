@@ -58,10 +58,10 @@ public class BoatToSavePeople {
     }
 
     public static void main(String[] args) {
-        //int[] arr = new int[]{3, 5, 3, 4}; // [3, 3, 4, 5] // [1, 2, 2, 3]
+        int[] arr = new int[]{3, 5, 3, 4}; // [3, 3, 4, 5] // [1, 2, 2, 3]
         //int[] arr = new int[]{3, 2, 2, 1}; // [3, 3, 4, 5] // [1, 2, 2, 3]
-        int[] arr = new int[]{1, 2}; // [3, 3, 4, 5] // [1, 2, 2, 3]
-        int limit = 3; // 3
+       // int[] arr = new int[]{1, 2}; // [3, 3, 4, 5] // [1, 2, 2, 3]
+        int limit = 6; // 3
         System.out.println(numRescueBoats(arr, limit));
     }
 }
